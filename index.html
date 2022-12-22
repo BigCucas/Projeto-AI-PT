@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dependente/fontawesome-free-6.2.1-web/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+    <title>Personal trainer AI</title>
+</head>
+
+<body> 
+    <div class="all">
+        <div class="row">
+            <div class="logo-site">
+                <p>
+                    <b>Personal Trainer AI</b>
+                </p>
+            </div>
+        </div>
+
+        <div class="row spacing"></div>
+        <div class="cal">
+            <div class="calendar">
+                <div class="calendar-header">
+                    <span class="month-picker" id="month-picker">April</span>
+                    <div class="year-picker">
+                        <span class="year-change" id="prev-year">
+                        <pre><</pre>
+                        </span>
+                        <span id="year">2022</span>
+                        <span class="year-change" id="next-year">
+                        <pre>></pre>
+                        </span>
+                </div>
+            </div>
+            <div class="calendar-body">
+                <div class="calendar-week-day">
+                    <div>S</div>
+                    <div>M</div>
+                    <div>T</div>
+                    <div>W</div>
+                    <div>T</div>
+                    <div>F</div>
+                    <div>S</div>
+                </div>
+                <div class="calendar-days"></div>
+            </div>
+            
+                <div class="month-list"></div>
+            </div>
+            <script src="/javascript/index.js"></script>
+        </div>
+        <div class="main_exer">
+            <div class="imga" style="max-width:500px">
+                <img class="mySlides" src="imagens/main_exe_cardio.png" style="width: 100%; border-radius: 30px;">
+                <img class="mySlides" src="imagens/main_exe_bracos.png" style="width:100%; border-radius: 30px;">
+                <img class="mySlides" src="imagens/main_exe_costas.png" style="width:100%; border-radius: 30px;">
+                <img class="mySlides" src="imagens/main_exe_peito.png" style="width:100%; border-radius: 30px;">
+                <img class="mySlides" src="imagens/main_exe_abdominais.png" style="width:100%; border-radius: 30px;">
+                <img class="mySlides" src="imagens/main_exe_ombros.png" style="width:100%; border-radius: 30px;">
+                <img class="mySlides" src="imagens/main_exe_pernas.png" style="width:100%; border-radius: 30px;">
+            </div>
+        </div>
+
+        <script>
+            var myIndex = 0;
+            carousel();
+
+            function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}    
+            x[myIndex-1].style.display = "block";  
+            setTimeout(carousel, 2000); // Change image every 2 seconds
+            }
+        </script>
+
+        <div class="row menu">
+            <nav>
+                <a href="index.html"><button><i class="fa fa-home"></button></i></a>
+                <a href="html/exercicios.html"><button><i class="fa-solid fa-dumbbell"></i></button></a>
+                <a href="html/health.html"><button><i class="fa fa-heart"></i></button></a>
+                <a><button><i class="fa fa-user"></i></button></a>
+            </nav>
+        </div>
+    </div>
+
+</body>
+
+</html>
